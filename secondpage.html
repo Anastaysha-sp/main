@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Общественный бассейн Just Swim</title>
+    <link rel="stylesheet" href="secondpage.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Логотип.png" alt="Логотип бассейна">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html">О нас</a></li>
+                    <li><a href="#">Услуги и цены</a></li>
+                    <li><a href="#">Расписание</a></li>
+                    <li><a href="#">Тренера</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <a href="#" class="btn">Зарегистрироваться</a>
+                <a href="#" class="btn">Записаться</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="slider">
+        <div class="slide active">
+            <div class="slide-content">
+                <p>Мы гордимся тем, что наша команда тренеров состоит из самых профессиональных, компетентных и опытных специалистов в области плавания и аквафитнеса. Мы тщательно отбираем лучших из лучших, чтобы вы могли быть уверены в высоком качестве обучения и безопасности занятий.Мы гордимся тем, что наша команда тренеров состоит из самых профессиональных, компетентных и опытных специалистов в области плавания и аквафитнеса. Мы тщательно отбираем лучших из лучших, чтобы вы могли быть уверены в высоком качестве обучения и безопасности занятий.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <!-- Поле поиска -->
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Поиск тренеров..." id="searchInput">
+        </div>
+        
+        <!-- Кнопки сортировки -->
+        <div class="sort-options">
+            <button class="sort-btn" data-sort="name">По имени</button>
+            <button class="sort-btn" data-sort="experience">По опыту</button>
+            <button class="sort-btn" data-sort="rating">По рейтингу</button>
+        </div>
+        
+        <!-- Карточки тренеров -->
+        <div class="trainers-container" id="trainersContainer">
+            <!-- Тренер 1 -->
+            <div class="trainer-card" data-name="Алексей Петров" data-experience="8" data-rating="4.9">
+                <img src="парень1.jpg" alt="Алексей Петров" class="trainer-image">
+                <div class="trainer-info">
+                    <div class="trainer-name">Алексей Петров</div>
+                    <div class="trainer-specialty">Тренер по плаванию, мастер спорта</div>
+                    <div class="trainer-experience">Опыт: 8 лет</div>
+                    <div class="trainer-rating">★ 4.9</div>
+                </div>
+            </div>
+            
+            <!-- Тренер 2 -->
+            <div class="trainer-card" data-name="Мария Иванова" data-experience="5" data-rating="4.7">
+                <img src="девушка1.jpg" alt="Мария Иванова" class="trainer-image">
+                <div class="trainer-info">
+                    <div class="trainer-name">Мария Иванова</div>
+                    <div class="trainer-specialty">Инструктор по аквааэробике</div>
+                    <div class="trainer-experience">Опыт: 5 лет</div>
+                    <div class="trainer-rating">★ 4.7</div>
+                </div>
+            </div>
+            
+            <!-- Тренер 3 -->
+            <div class="trainer-card" data-name="Дмитрий Смирнов" data-experience="12" data-rating="5.0">
+                <img src="парень2.jpg" alt="Дмитрий Смирнов" class="trainer-image">
+                <div class="trainer-info">
+                    <div class="trainer-name">Дмитрий Смирнов</div>
+                    <div class="trainer-specialty">Тренер по спортивному плаванию</div>
+                    <div class="trainer-experience">Опыт: 12 лет</div>
+                    <div class="trainer-rating">★ 5.0</div>
+                </div>
+            </div>
+            
+            <!-- Тренер 4 -->
+            <div class="trainer-card" data-name="Елена Кузнецова" data-experience="6" data-rating="4.8">
+                <img src="девушка2.jpg" alt="Елена Кузнецова" class="trainer-image">
+                <div class="trainer-info">
+                    <div class="trainer-name">Елена Кузнецова</div>
+                    <div class="trainer-specialty">Инструктор по детскому плаванию</div>
+                    <div class="trainer-experience">Опыт: 6 лет</div>
+                    <div class="trainer-rating">★ 4.8</div>
+                </div>
+            </div>
+            
+            <!-- Тренер 5 -->
+            <div class="trainer-card" data-name="Иван Волков" data-experience="10" data-rating="4.9">
+                <img src="парень3.jpg" alt="Иван Волков" class="trainer-image">
+                <div class="trainer-info">
+                    <div class="trainer-name">Иван Волков</div>
+                    <div class="trainer-specialty">Тренер по подводному плаванию</div>
+                    <div class="trainer-experience">Опыт: 10 лет</div>
+                    <div class="trainer-rating">★ 4.9</div>
+                </div>
+            </div>
+            
+            <!-- Тренер 6 -->
+            <div class="trainer-card" data-name="Ольга Белова" data-experience="7" data-rating="4.6">
+                <img src="девушка3.jpg" alt="Ольга Белова" class="trainer-image">
+                <div class="trainer-info">
+                    <div class="trainer-name">Ольга Белова</div>
+                    <div class="trainer-specialty">Инструктор по синхронному плаванию</div>
+                    <div class="trainer-experience">Опыт: 7 лет</div>
+                    <div class="trainer-rating">★ 4.6</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Пагинация -->
+        <div class="pagination">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column logo">
+                <img src="Логотип.png" alt="Логотип Just Swim">
+            </div>
+    
+            <div class="footer-column">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li><a href="#">Общая информация</a></li>
+                    <li><a href="#">Преимущества</a></li>
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Мерч</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>OUR CONTACTS</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +7 (915) 777 23 28</li>
+                    <li><i class="fas fa-envelope"></i> @Just_Sweem25</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Пушкина 36</li>
+                </ul>
+            </div>
+    
+            <div class="footer-column social">
+                <h3>OUR SOCIAL NETWORKS</h3>
+                <div class="social-icons">
+                    <a href="#"><img src="telegram_icon_130816 1.png" alt="Telegram"></a>
+                    <a href="#"><img src="32-vk.png" alt="VK"></a>
+                    <a href="#"><img src="iconfinder-social-media-applications-3instagram-4102579_113804 1.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
