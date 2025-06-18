@@ -1,0 +1,599 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px; /* Добавляем отступы по бокам */
+}
+
+header {
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(185, 185, 185, 0.394);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+header .container {
+    max-width: 1200px; /* Ограничиваем максимальную ширину контейнера */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    gap: 20px; /* Добавляем промежуток между элементами */
+}
+
+header .logo img {
+    height: 63px;
+    width: auto; /* Сохраняем пропорции логотипа */
+}
+
+header nav {
+    flex: 1; /* Занимает доступное пространство */
+    max-width: 600px; /* Ограничиваем ширину навигации */
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+header nav ul li {
+    margin: 0 15px; /* Уменьшаем отступы между пунктами */
+}
+
+header nav ul li a {
+    color: rgb(27, 27, 27);
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    line-height: 70px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+    padding: 0 5px; /* Добавляем отступы для текста */
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+header nav ul li a:hover {
+    color: #000000;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-top: -30px;
+}
+
+.btn {
+    color: black !important;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 100px !important;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 14px;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.btn:hover {
+    background-color: black;
+    color: white !important;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 1024px) {
+    header nav ul li {
+        margin: 0 10px;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+        gap: 15px;
+    }
+    
+    header nav {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        max-width: 100%;
+    }
+    
+    header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    header nav ul li {
+        margin: 0 8px;
+    }
+    
+    header nav ul li a {
+        line-height: 40px;
+    }
+    
+    .header-buttons {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        height: 50px;
+    }
+    
+    header nav ul li {
+        margin: 0 5px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+.slider {
+    width: 100%;
+    background-image: url(фонглавная.jpg);
+    background-size: cover;       /* Масштабирует изображение с сохранением пропорций, чтобы оно заполнило весь блок */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    color: #fff;
+    height: 100vh;
+}
+
+.slider .slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slider .slide-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.slider .slide-content p {
+    font-size: 1.140em;
+    line-height: 1.3;
+    margin-top: 280px;
+    text-align: center;
+    color: #647386;
+}
+
+
+.about {
+    background-image: url(фон2.jpg);
+    padding: 80px 0;
+    /* Добавим тень для визуального разделения */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about .container {
+    max-width: 900px; /* Ограничим ширину контента */
+    margin: 0 auto;
+    padding: 0 30px; /* Отступы по бокам */
+}
+
+.about-content {
+    text-align: center; /* Центрируем контент */
+    margin-bottom: 30px;
+}
+
+.about-content h2 {
+    font-size: 3.5em; /* Увеличим размер заголовка */
+    font-weight: 600; /* Сделаем шрифт полужирным */
+    color: #333;
+    margin-bottom: 20px;
+    /* Добавим небольшую линию под заголовком */
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.about-content h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background-color: #3498db; /* Цвет линии */
+}
+
+.about-content p {
+    font-size: 1.2em;
+    line-height: 1.7; /* Улучшим читаемость */
+    color: #555;
+    max-width: 800px; /* Ограничим ширину текста */
+    margin: 0 auto; /* Центрируем текст */
+}
+
+.l{
+    padding-bottom: 0px;
+}
+
+.advantages {
+    background-color: #131333; /* Темно-синий фон */
+    color: #fff;
+    padding: 0px 0;
+}
+
+.advantages .container {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+.advantages h2 {
+    padding: 80px;
+    font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 60px;
+    font-weight: 600;
+}
+
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Адаптивная сетка */
+    gap: 30px;
+}
+
+.advantage-item {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    background-color: rgba(255, 255, 255, 0); /* Полупрозрачный белый фон для элементов */
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.advantage-left {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    background-color: rgba(255, 255, 255, 0); /* Полупрозрачный белый фон для элементов */
+    border-radius: 10px;
+    padding: 30px;
+    flex-direction: row-reverse; /* Меняем порядок элементов на обратный */
+}
+
+
+.advantage-image {
+    width: 500px; /* Фиксированная ширина для изображений */
+    flex-shrink: 0; /* Предотвращает сжатие изображений */
+}
+
+.advantage-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.advantage-text {
+    flex: 1; /* Занимает доступное пространство */
+    margin-right: 20px; /* Отступ от изображения */
+}
+
+.advantage-textleft {
+    flex: 1; /* Занимает доступное пространство */
+    margin-left: 50px; /* Отступ от изображения */
+}
+
+.advantage-textleft h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.advantage-text h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.advantage-textleft p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.advantage-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+
+/* Анимация (пока без JS, просто заготовка) */
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    .slider .slide {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .slider .slide-content,
+    .slider .slide-image,
+    .about .about-content,
+    .about .about-image {
+        width: 90%;
+    }
+
+    .advantage-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.image-slider {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 40%;
+}
+
+.image-slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+}
+
+.image-slide {
+    width: 25%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    border-radius: 20px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.slider-navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.slider-navigation label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-navigation label:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Переключение слайдов */
+#slide1:checked ~ .image-slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .image-slides {
+    transform: translateX(-25%);
+}
+
+#slide3:checked ~ .image-slides {
+    transform: translateX(-50%);
+}
+
+#slide4:checked ~ .image-slides {
+    transform: translateX(-75%);
+}
+
+/* Активный индикатор */
+#slide1:checked ~ .slider-navigation label:nth-child(1),
+#slide2:checked ~ .slider-navigation label:nth-child(2),
+#slide3:checked ~ .slider-navigation label:nth-child(3),
+#slide4:checked ~ .slider-navigation label:nth-child(4) {
+    background-color: white;
+}
+
+footer {
+    background-color: rgba(37, 37, 37, 0.2); 
+    color: white;
+    position: relative;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: left;
+    margin: 10px;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #00b4d8;
+}
+
+.footer-column.logo {
+    text-align: center;
+    width: 100px;
+}
+
+.footer-column.logo img {
+    width: 100%;
+    height: auto;
+    max-width: 80px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.app-links a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.app-links img {
+    width: 120px;
+    height: auto;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .content {
+        padding-bottom: 400px; /* Больший отступ для мобильных */
+    }
+}
+
