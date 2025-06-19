@@ -1,0 +1,593 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px; /* Добавляем отступы по бокам */
+}
+
+header {
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(185, 185, 185, 0.394);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+header .container {
+    max-width: 1200px; /* Ограничиваем максимальную ширину контейнера */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    gap: 20px; /* Добавляем промежуток между элементами */
+}
+
+header .logo img {
+    height: 63px;
+    width: auto; /* Сохраняем пропорции логотипа */
+}
+
+header nav {
+    flex: 1; /* Занимает доступное пространство */
+    max-width: 600px; /* Ограничиваем ширину навигации */
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+header nav ul li {
+    margin: 0 15px; /* Уменьшаем отступы между пунктами */
+}
+
+header nav ul li a {
+    color: rgb(27, 27, 27);
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    line-height: 70px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+    padding: 0 5px; /* Добавляем отступы для текста */
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+header nav ul li a:hover {
+    color: #000000;
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgb(0, 0, 0);
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding-top: -30px;
+}
+
+.btn {
+    color: black !important;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 100px !important;
+    text-decoration: none;
+    transition: all 0.5s ease;
+    background-color: transparent;
+    border: 2px solid black;
+    font-size: 14px;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.btn:hover {
+    background-color: black;
+    color: white !important;
+}
+
+/* Адаптация для мобильных устройств */
+@media (max-width: 1024px) {
+    header nav ul li {
+        margin: 0 10px;
+    }
+    
+    .btn {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 20px;
+        gap: 15px;
+    }
+    
+    header nav {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        max-width: 100%;
+    }
+    
+    header nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    header nav ul li {
+        margin: 0 8px;
+    }
+    
+    header nav ul li a {
+        line-height: 40px;
+    }
+    
+    .header-buttons {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo img {
+        height: 50px;
+    }
+    
+    header nav ul li {
+        margin: 0 5px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+.slider {
+    width: 100%;
+    background-image: url(фон4.png);
+    background-size: cover;       /* Масштабирует изображение с сохранением пропорций, чтобы оно заполнило весь блок */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Отключает повторение изображения */
+    color: #fff;
+    height: 100vh;
+}
+
+.slider .slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.slider .slide-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.slider .slide-content p {
+    font-size: 1.140em;
+    line-height: 1.3;
+    margin-top: 280px;
+    text-align: center;
+    color: #647386;
+}
+
+
+
+
+
+
+.comments-section {
+    width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 14px; /* На 2px больше основного радиуса */
+    border: 3px solid linear-gradient(45deg, #ff6b6b, #4ecdc4, #ff6b6b);
+}
+
+/* Градиентная обводка с анимацией */
+.comments-section::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-size: 200% 200%;
+    animation: gradientBorder 3s ease infinite;
+}
+
+/* Анимация перетекания градиента */
+@keyframes gradientBorder {
+    0% { border-position: 0% 50%; }
+    50% { border-position: 100% 50%; }
+    100% { border-position: 0% 50%; }
+}
+
+/* Остальные существующие стили */
+.comments-section h3 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.comments-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #ff6b6b, #4ecdc4);
+}
+
+/* ... остальные ваши стили ... */
+
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comment-form input,
+.comment-form textarea {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+    border-color: #4ecdc4;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+}
+
+.comment-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.comment-form button {
+    align-self: flex-end;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.comment-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comment-form button:active {
+    transform: translateY(0);
+}
+
+#comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.comment {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease-out;
+    border-left: 4px solid #4ecdc4;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+
+.comment-date {
+    color: #888;
+    font-size: 14px;
+}
+
+.comment-text {
+    color: #555;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .comments-section {
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .comment-form input,
+    .comment-form textarea {
+        padding: 12px;
+    }
+}
+
+.map-container {
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 30px auto; /* Центрируем блок и добавляем отступы */
+    max-width: 1000px; /* Максимальная ширина */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Более выразительная тень */
+    background-color: #fff; /* Белый фон контейнера */
+    transition: transform 0.3s ease-in-out; /* Добавляем плавную анимацию */
+}
+
+.map-container:hover {
+    transform: scale(1.02); /* Немного увеличиваем при наведении */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* Усиливаем тень при наведении */
+}
+
+.map-text {
+    width: 40%;
+    padding: 30px;
+    background-color: #f8f9fa; /* Светло-серый фон */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Выравниваем текст по центру по вертикали */
+}
+
+.map-text h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #343a40; /* Темный цвет заголовка */
+    font-weight: 600;
+}
+
+.map-text p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #6c757d; /* Более светлый цвет текста */
+    line-height: 1.5;
+}
+
+.map-text address {
+    font-style: normal;
+    font-size: 1.1em;
+    color: #495057;
+    line-height: 1.5;
+}
+
+.map-image {
+    width: 60%;
+}
+
+.map-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover; /* Гарантируем, что изображение заполняет блок, обрезая его, если необходимо */
+    transition: transform 0.3s ease-in-out;
+}
+
+.map-container:hover .map-image img {
+    transform: scale(1.05); /* Небольшое увеличение изображения при наведении на контейнер */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+    .map-container {
+        flex-direction: column;
+        margin: 20px; /* Убираем центрирование на маленьких экранах */
+    }
+
+    .map-text {
+        width: 100%;
+        padding: 20px;
+        text-align: center; /* Центрируем текст на мобильных */
+    }
+
+    .map-image {
+        width: 100%;
+        height: 300px; /* Фиксируем высоту изображения на мобильных */
+    }
+
+    .map-text h2 {
+        font-size: 1.8em;
+    }
+}
+
+footer {
+    background-color: rgba(37, 37, 37, 0.2); 
+    color: white;
+    position: relative;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 100;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    text-align: left;
+    margin: 10px;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #00b4d8;
+}
+
+.footer-column.logo {
+    text-align: center;
+    width: 100px;
+}
+
+.footer-column.logo img {
+    width: 100%;
+    height: auto;
+    max-width: 80px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+.app-links a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.app-links img {
+    width: 120px;
+    height: auto;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .content {
+        padding-bottom: 400px; /* Больший отступ для мобильных */
+    }
+}

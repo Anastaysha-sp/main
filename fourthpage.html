@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>главная страница</title>
+    <link rel="stylesheet" href="fourthpage.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="Логотип.png" alt="Логотип бассейна">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="main.html">О нас</a></li>
+                    <li><a href="thirdpage.html">Услуги</a></li>
+                    <li><a href="#">Свяжитесь с нами</a></li>
+                    <li><a href="secondpage.html">Тренера</a></li>
+                </ul>
+            </nav>
+            <div class="header-buttons">
+                <a href="#" class="btn">Зарегистрироваться</a>
+                <a href="#" class="btn">Записаться</a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="slider">
+        <div class="slide active">
+            <div class="slide-content">
+            </div>
+        </div>
+    </section>
+
+    <div class="comments-section">
+        <h3>СВЯЖИТЕСЬ С НАМИ</h3>
+    
+        <form class="comment-form" id="comment-form">
+            <input type="text" id="comment-name" class="comment-input" placeholder="Ваше имя" required>
+            <input type="email" id="comment-email" class="comment-input" placeholder="Ваш email" required>
+            <textarea id="comment-text" placeholder="Ваш комментарий..." required></textarea>
+            <button type="submit">ОТПРАВИТЬ</button>
+        </form>
+        <div id="comments-list"></div>
+    </div>
+
+    <div class="map-container">
+        <div class="map-text">
+            <h2>Как нас найти</h2>
+            <p>Наш адрес:</p>
+            <address>
+                ул. Пушкина, д. 36<br>
+                г. Москва, Россия<br>
+                123456
+            </address>
+        </div>
+        <div class="map-image">
+            <img src="карта.png" alt="Карта проезда">
+        </div>
+    </div>
+
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column logo">
+                    <img src="Логотип.png" alt="Логотип Just Swim">
+                </div>
+        
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <ul>
+                        <li><a href="#">Общая информация</a></li>
+                        <li><a href="#">Преимущества</a></li>
+                        <li><a href="#">Меню</a></li>
+                        <li><a href="#">Мерч</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column">
+                    <h3>OUR CONTACTS</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (915) 777 23 28</li>
+                        <li><i class="fas fa-envelope"></i> @Just_Sweem25</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Пушкина 36</li>
+                    </ul>
+                </div>
+        
+                <div class="footer-column social">
+                    <h3>OUR SOCIAL NETWORKS</h3>
+                    <div class="social-icons">
+                        <a href="https://t.me/kitp_vlsu"><img src="telegram_icon_130816 1.png" alt="Telegram"></a>
+                        <a href="https://vk.com/college.vlsu?from=groups"><img src="32-vk.png" alt="VK"></a>
+                        <a href="#"><img src="iconfinder-social-media-applications-3instagram-4102579_113804 1.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
