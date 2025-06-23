@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>главная страница</title>
+    <title>Главная страница</title>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <header>
@@ -29,7 +30,7 @@
 
     <section class="slider">
         <div class="slide active">
-            <div class="slide-content">
+            <div class="slide-content fade-in">
                 <p>Просто плыви, просто дыши, просто делай. Отпусти всё лишнее и сделай то, чего так давно хотел.</p>
             </div>
         </div>
@@ -37,24 +38,29 @@
 
     <section class="about">
         <div class="container">
-            <div class="about-content">
+            <div class="about-content fade-in">
                 <h2>Sweem Vibes Only</h2>
-                <p>Общественный бассейн Just Sween – это больше, чем просто место для плавания. Это пространство, где встречаются здоровье, спорт, отдых и общение. Мы создали комфортную и безопасную среду для людей всех возрастов и уровней подготовки, где каждый может найти занятие по душе и укрепить свое здоровье.</p>
+                <p>Общественный бассейн Just Swim – это больше, чем просто место для плавания. Это пространство, где встречаются здоровье, спорт, отдых и общение. Мы создали комфортную и безопасную среду для людей всех возрастов и уровней подготовки, где каждый может найти занятие по душе и укрепить свое здоровье.</p>
             </div>
         </div>
-        <div class="image-slider">
+        <div class="image-slider fade-in delay-1">
+            <div class="slider-buttons">
+                <button class="slider-button prev">❮</button>
+                <button class="slider-button next">❯</button>
+            </div>
+            
             <input type="radio" name="slider" id="slide1" checked>
             <input type="radio" name="slider" id="slide2">
             <input type="radio" name="slider" id="slide3">
             <input type="radio" name="slider" id="slide4">
-        
+            
             <div class="image-slides">
                 <div class="image-slide" style="background-image: url('1.jpg');"></div>
                 <div class="image-slide" style="background-image: url('2.jpg');"></div>
                 <div class="image-slide" style="background-image: url('3.jpg');"></div>
                 <div class="image-slide" style="background-image: url('4.jpg');"></div>
             </div>
-        
+            
             <div class="slider-navigation">
                 <label for="slide1"></label>
                 <label for="slide2"></label>
@@ -66,20 +72,19 @@
 
     <section class="advantages">
         <div class="container">
-            <h2>OUR ADVANTAGES</h2>
+            <h2 class="fade-in">OUR ADVANTAGES</h2>
             <div class="advantage-grid">
-                <div class="advantage-item">
+                <div class="advantage-item fade-in delay-1">
                     <div class="advantage-text">
                         <h3>01. Широкий выбор услуг</h3>
                         <p>Мы предлагаем широкий спектр услуг для посетителей всех возрастов и уровней подготовки.</p>
                     </div>
-
                     <div class="advantage-image">
                         <img src="01.png" alt="Широкий выбор услуг">
                     </div>
                 </div>
     
-                <div class="advantage-left">
+                <div class="advantage-left fade-in delay-2">
                     <div class="advantage-textleft">
                         <h3>02. Квалифицированные тренера</h3>
                         <p>Наша команда состоит из опытных и сертифицированных тренеров, которые помогут вам освоить различные стили плавания, достичь своих спортивных целей или просто получить удовольствие от занятий в воде.</p>
@@ -89,7 +94,7 @@
                     </div>
                 </div>
     
-                <div class="advantage-item">
+                <div class="advantage-item fade-in delay-3">
                     <div class="advantage-text">
                         <h3>03. Современные условия</h3>
                         <p>Наш бассейн оснащен современным оборудованием, удобными раздевалками, душевыми и фенами. Мы также предлагаем дополнительные услуги, такие как сауна, кафе и магазин спортивных товаров.</p>
@@ -99,7 +104,7 @@
                     </div>
                 </div>
     
-                <div class="advantage-left">
+                <div class="advantage-left fade-in delay-4">
                     <div class="advantage-textleft">
                         <h3>04. Кристально чистая вода</h3>
                         <p>Мы используем передовые системы очистки и фильтрации воды, чтобы гарантировать ее безопасность и высокое качество. Вода в нашем бассейне всегда соответствует самым строгим санитарным нормам.</p>
@@ -111,47 +116,44 @@
             </div>
         </div>
         <div class="l">
-            <img src="линии.svg">
+            <img src="линии.svg" class="fade-in">
         </div>
-        <footer>
-            <div class="footer-container">
-                <div class="footer-column logo">
-                    <img src="Логотип.png" alt="Логотип Just Swim">
-                </div>
-        
-                <div class="footer-column">
-                    <h3>ABOUT US</h3>
-                    <ul>
-                        <li><a href="#">Общая информация</a></li>
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Меню</a></li>
-                        <li><a href="#">Мерч</a></li>
-                    </ul>
-                </div>
-        
-                <div class="footer-column">
-                    <h3>OUR CONTACTS</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +7 (915) 777 23 28</li>
-                        <li><i class="fas fa-envelope"></i> @Just_Sweem25</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Пушкина 36</li>
-                    </ul>
-                </div>
-        
-                <div class="footer-column social">
-                    <h3>OUR SOCIAL NETWORKS</h3>
-                    <div class="social-icons">
-                        <a href="#"><img src="telegram_icon_130816_1.png" alt="Telegram"></a>
-                        <a href="#"><img src="32-vk.png" alt="VK"></a>
-                        <a href="#"><img src="iconfinder-social-media-applications-3instagram-4102579_113804_1.png" alt="Instagram"></a>
-                    </div>
-                    <div class="app-links">
-                        <a href="#"><img src="Google_Play.png" alt="Google Play"></a>
-                        <a href="#"><img src="App_Store.png" alt="App Store"></a>
-                    </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column logo">
+                <img src="Логотип.png" alt="Логотип Just Swim">
+            </div>
+    
+            <div class="footer-column">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li><a href="#">Общая информация</a></li>
+                    <li><a href="#">Преимущества</a></li>
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Мерч</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>OUR CONTACTS</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +7 (915) 777 23 28</li>
+                    <li><i class="fas fa-envelope"></i> @Just_Sweem25</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Пушкина 36</li>
+                </ul>
+            </div>
+    
+            <div class="footer-column social">
+                <h3>OUR SOCIAL NETWORKS</h3>
+                <div class="social-icons">
+                    <a href="https://t.me/kitp_vlsu"><img src="telegram_icon_130816 1.png" alt="Telegram"></a>
+                    <a href="https://vk.com/college.vlsu?from=groups"><img src="32-vk.png" alt="VK"></a>
+                    <a href="#"><img src="iconfinder-social-media-applications-3instagram-4102579_113804 1.png" alt="Instagram"></a>
                 </div>
             </div>
-        </footer>
-    </section>
+        </div>
+    </footer>
 </body>
 </html>
