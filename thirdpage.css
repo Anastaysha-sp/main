@@ -717,3 +717,18 @@ header nav ul li a:hover::after {
                 padding-bottom: 400px; /* Больший отступ для мобильных */
             }
         }
+
+        .delete-comment {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 2px 8px;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background 0.3s;
+        }
+        
+        .delete-comment:hover {
+            background: #ff5252;
+        }
