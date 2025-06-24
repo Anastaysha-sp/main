@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>главная страница</title>
+    <title>Свяжитесь с нами | Just Swim</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="fourthpage.css">
+    <script src="fourthpage.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_api_ключ&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
     <header>
@@ -16,7 +19,7 @@
                 <ul>
                     <li><a href="main.html">О нас</a></li>
                     <li><a href="thirdpage.html">Услуги</a></li>
-                    <li><a href="#">Свяжитесь с нами</a></li>
+                    <li><a href="#" class="active">Свяжитесь с нами</a></li>
                     <li><a href="secondpage.html">Тренера</a></li>
                 </ul>
             </nav>
@@ -34,68 +37,109 @@
         </div>
     </section>
 
-    <div class="comments-section">
-        <h3>СВЯЖИТЕСЬ С НАМИ</h3>
-    
-        <form class="comment-form" id="comment-form">
-            <input type="text" id="comment-name" class="comment-input" placeholder="Ваше имя" required>
-            <input type="email" id="comment-email" class="comment-input" placeholder="Ваш email" required>
-            <textarea id="comment-text" placeholder="Ваш комментарий..." required></textarea>
-            <button type="submit">ОТПРАВИТЬ</button>
-        </form>
-        <div id="comments-list"></div>
-    </div>
-
-    <div class="map-container">
-        <div class="map-text">
-            <h2>Как нас найти</h2>
-            <p>Наш адрес:</p>
-            <address>
-                ул. Пушкина, д. 36<br>
-                г. Москва, Россия<br>
-                123456
-            </address>
-        </div>
-        <div class="map-image">
-            <img src="карта.png" alt="Карта проезда">
-        </div>
-    </div>
-
-        <footer>
-            <div class="footer-container">
-                <div class="footer-column logo">
-                    <img src="Логотип.png" alt="Логотип Just Swim">
+    <div class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>КОНТАКТНАЯ ИНФОРМАЦИЯ</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Москва, ул. Пушкина 36</p>
                 </div>
-        
-                <div class="footer-column">
-                    <h3>ABOUT US</h3>
-                    <ul>
-                        <li><a href="#">Общая информация</a></li>
-                        <li><a href="#">Преимущества</a></li>
-                        <li><a href="#">Меню</a></li>
-                        <li><a href="#">Мерч</a></li>
-                    </ul>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+7 (915) 777 23 28</p>
                 </div>
-        
-                <div class="footer-column">
-                    <h3>OUR CONTACTS</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +7 (915) 777 23 28</li>
-                        <li><i class="fas fa-envelope"></i> @Just_Sweem25</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Пушкина 36</li>
-                    </ul>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@justswim.ru</p>
                 </div>
-        
-                <div class="footer-column social">
-                    <h3>OUR SOCIAL NETWORKS</h3>
-                    <div class="social-icons">
-                        <a href="https://t.me/kitp_vlsu"><img src="telegram_icon_130816 1.png" alt="Telegram"></a>
-                        <a href="https://vk.com/college.vlsu?from=groups"><img src="32-vk.png" alt="VK"></a>
-                        <a href="#"><img src="iconfinder-social-media-applications-3instagram-4102579_113804 1.png" alt="Instagram"></a>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <p>Пн-Пт: 8:00 - 22:00<br>Сб-Вс: 9:00 - 20:00</p>
+                </div>
+            </div>
+            
+            <div class="contact-form-wrapper">
+                <div class="contact-form-header">
+                    <h3>НАПИШИТЕ НАМ</h3>
+                    <p>Заполните форму ниже, и мы свяжемся с вами в ближайшее время</p>
+                </div>
+                
+                <form class="contact-form" id="comment-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="comment-name" class="form-input" placeholder=" " required>
+                            <label for="comment-name">Ваше имя</label>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="comment-email" class="form-input" placeholder=" " required>
+                            <label for="comment-email">Ваш email</label>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="comment-text" class="form-textarea" placeholder=" " required></textarea>
+                        <label for="comment-text">Ваше сообщение</label>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Отправить сообщение</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                
+                <div id="form-success" class="form-success">
+                    <div class="success-content">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Спасибо за ваше сообщение!</h4>
+                        <p>Мы свяжемся с вами в ближайшее время</p>
                     </div>
                 </div>
             </div>
-        </footer>
-    </section>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div id="map" style="width: 100%; height: 400px;"></div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column logo">
+                <img src="Логотип.png" alt="Логотип Just Swim">
+            </div>
+    
+            <div class="footer-column">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li><a href="#">Общая информация</a></li>
+                    <li><a href="#">Преимущества</a></li>
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Мерч</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-column">
+                <h3>OUR CONTACTS</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +7 (915) 777 23 28</li>
+                    <li><i class="fas fa-envelope"></i> @Just_Sweem25</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Москва, ул. Пушкина 36</li>
+                </ul>
+            </div>
+    
+            <div class="footer-column social">
+                <h3>OUR SOCIAL NETWORKS</h3>
+                <div class="social-icons">
+                    <a href="https://t.me/kitp_vlsu" target="_blank"><i class="fab fa-telegram"></i></a>
+                    <a href="https://vk.com/college.vlsu" target="_blank"><i class="fab fa-vk"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
